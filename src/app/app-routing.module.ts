@@ -14,6 +14,14 @@ const routes: Routes = [
   {
     path: 'list',
     loadChildren: () => import('./list/list.module').then(m => m.ListPageModule)
+  },
+  {
+    path: 'basic-info',
+    loadChildren: () => import('./setup/basic-info/basic-info.module').then( m => m.BasicInfoPageModule)
+  },
+  {
+    path: 'savings-prefs',
+    loadChildren: () => import('./setup/savings-prefs/savings-prefs.module').then( m => m.SavingsPrefsPageModule)
   }
 ];
 
