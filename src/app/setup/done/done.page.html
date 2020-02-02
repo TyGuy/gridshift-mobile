@@ -5,20 +5,30 @@
 
   <div class="intro-content">
     <p color="light">
-      <b>Fantastic!</b>
+      <b *ngIf="!prefControl">Fantastic!</b>
+      <b *ngIf="prefControl">Sounds Good.</b>
     </p>
     <div style="height:20px;"></div>
 
-    <p color="light">
-      With those choices, you can expect to see:
-    </p>
+    <div *ngIf="!prefControl">
+      <p color="light">
+        With those choices, you can expect to see:
+      </p>
 
-    <p color="light" class="stat">
-      <span class="stat-feature">${{expectedDailySavings}} / day</span> in savings
-    </p>
-    <p color="light" class="stat">
-      <span class="stat-feature">{{expectedDailyMitigation}} kg CO2 / day</span> mitigated
-    </p>
+      <p color="light" class="stat">
+        <span class="stat-feature">${{expectedDailySavings}} / day</span> in savings
+      </p>
+      <p color="light" class="stat">
+        <span class="stat-feature">{{expectedDailyMitigation}} kg CO2 / day</span> mitigated
+      </p>
+    </div>
+
+    <div *ngIf="prefControl">
+      <p color="light" class="stat">
+        You may not see savings with this preference, but you'll always have your product completely within your control.
+      </p>
+    </div>
+
     <div style="height:40px;"></div>
 
     <ion-button expand="block" fill="outline" color="light">

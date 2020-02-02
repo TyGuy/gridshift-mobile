@@ -13,9 +13,11 @@ export class OptimizingPage implements OnInit {
   ) { }
 
   ngOnInit() {
+  }
+
+  ionViewDidEnter() {
     setTimeout(() => {
       this.router.navigate(['/done']);
     }, 8000);
   }
-
 }

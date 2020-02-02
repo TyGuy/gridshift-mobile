@@ -3,8 +3,8 @@
   <ion-card class="grove-card">
     <ion-card-header>
       <ion-card-title>Today</ion-card-title>
-      <ion-card-subtitle>Upcoming Schedule: 1AM - 5AM</ion-card-subtitle>
-      <ion-card-subtitle>Planned Usage: 30 kWh</ion-card-subtitle>
+      <ion-card-subtitle>Upcoming Schedule: {{runHoursToday}}</ion-card-subtitle>
+      <ion-card-subtitle>Planned Usage: {{plannedUsage}} kWh</ion-card-subtitle>
     </ion-card-header>
 
     <ion-card-content>
@@ -13,7 +13,7 @@
           <ion-col size="6" align-self-center text-center>
             <app-summary-stat
               [statName]="'savings'"
-              [statValue]="4.33"
+              [statValue]="expectedSavingsToday"
               [imageUrl]="'../../assets/dollar.png'"
             ></app-summary-stat>
           </ion-col>
@@ -21,7 +21,7 @@
           <ion-col size="6" align-self-center text-center>
             <app-summary-stat
               [statName]="'trees'"
-              [statValue]="15"
+              [statValue]="expectedMitigationToday"
               [imageUrl]="'../../assets/trees.png'"
             ></app-summary-stat>
           </ion-col>

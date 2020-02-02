@@ -42,6 +42,7 @@ export class SavingsPrefsPage implements OnInit {
 
     this.apiService.requestTimesAndRates(this.dataService.optimizationRequestData)
       .subscribe((optimizationData) => {
+        console.log(optimizationData)
         this.dataService.optimizationData = optimizationData;
       });
   }

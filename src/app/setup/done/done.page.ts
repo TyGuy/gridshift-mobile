@@ -15,6 +15,14 @@ export class DonePage implements OnInit {
     return this.dataService.expectedDailyMitigation;
   }
 
+  get preference(): string {
+    return this.dataService.preferredValue;
+  }
+
+  get prefControl(): boolean {
+    return this.preference === 'control'
+  }
+
   constructor(
     private dataService: DataService,
   ) { }
