@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { SavingsPrefsPageRoutingModule } from './savings-prefs-routing.module';
+import { DonePageRoutingModule } from './done-routing.module';
 
-import { SavingsPrefsPage } from './savings-prefs.page';
+import { DonePage } from './done.page';
 import { VerticalStepsModule } from 'src/app/components/vertical-steps/vertical-steps.module';
 
 @NgModule({
@@ -14,11 +14,9 @@ import { VerticalStepsModule } from 'src/app/components/vertical-steps/vertical-
     CommonModule,
     FormsModule,
     IonicModule,
-    SavingsPrefsPageRoutingModule,
+    DonePageRoutingModule,
     VerticalStepsModule,
   ],
-  declarations: [
-    SavingsPrefsPage,
-  ]
+  declarations: [DonePage]
 })
-export class SavingsPrefsPageModule {}
+export class DonePageModule {}

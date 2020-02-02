@@ -62,8 +62,20 @@
   max-width: 100%;
   width: 100px;
 
+  &.step-0 {
+    height: 0%; // 60% / 3
+  }
+
   &.step-1 {
     height: 20%; // 60% / 3
+  }
+
+  &.step-2 {
+    height: 40%;
+  }
+
+  &.step-3 {
+    height: 60%;
   }
 
   &::after {

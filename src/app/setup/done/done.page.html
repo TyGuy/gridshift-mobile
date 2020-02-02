@@ -1,0 +1,32 @@
+<ion-content>
+  <app-vertical-steps [curStep]="3"></app-vertical-steps>
+
+  <div class="intro-block-offset"></div>
+
+  <div class="intro-content">
+    <p color="light">
+      <b>Fantastic!</b>
+    </p>
+    <div style="height:20px;"></div>
+
+    <p color="light">
+      With those choices, you can expect to see:
+    </p>
+
+    <p color="light" class="stat">
+      <span class="stat-feature">${{expectedDailySavings}} / day</span> in savings
+    </p>
+    <p color="light" class="stat">
+      <span class="stat-feature">{{expectedDailyMitigation}} kg CO2 / day</span> mitigated
+    </p>
+    <div style="height:40px;"></div>
+
+    <ion-button expand="block" fill="outline" color="light">
+      <a href="#" [routerLink]="['/home']">
+        Finish&nbsp;&nbsp;
+      </a>
+      <ion-icon name="arrow-forward"></ion-icon>
+    </ion-button>
+  </div>
+
+</ion-content>

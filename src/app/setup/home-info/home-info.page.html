@@ -1,0 +1,50 @@
+<ion-content>
+  <app-vertical-steps [curStep]="1"></app-vertical-steps>
+
+  <div style="height:20px;"></div>
+  <div style="height:20px;"></div>
+  <div style="height:20px;"></div>
+
+  <div class="intro-content">
+    <p color="light">
+      <b>Home information</b>
+    </p>
+    <div style="height:20px;"></div>
+    <p color="light">
+      First, just find your utility, and sign into your account to authorize our use of your energy data.
+    </p>
+
+    <form (ngSubmit)="onSubmit()" #homeForm="ngForm">
+      <ion-item class="clear-form">
+        <!-- <ion-label color="light">Username</ion-label> -->
+        <ion-input [(ngModel)]="email" placeholder="Email" name="email" required></ion-input>
+      </ion-item>
+
+      <ion-item class="clear-form">
+        <!-- <ion-label color="light">Password</ion-label> -->
+        <ion-input type="password" [(ngModel)]="password" placeholder="Password" name="password" required></ion-input>
+      </ion-item>
+
+      <div style="height:20px;"></div>
+
+      <ion-item class="clear-form">
+        <!-- <ion-label color="light" start>Utility</ion-label> -->
+        <ion-label position="stacked" color="light">Utility</ion-label>
+        <ion-select [(ngModel)]="selectedUtilityId" (ionChange)="utlitySelected($event)" name="selectedUtilityId">
+        <!-- <ion-select interface="popover" [(ngModel)]="selectedUtilityId" name="selectedUtilityId"> -->
+          <ion-select-option *ngFor="let utility of utilities" [value]="utility.id">{{utility.name}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <div style="height:40px;"></div>
+
+      <ion-button expand="block" fill="outline" color="light" type="submit" [disabled]="!homeForm.form.valid">
+        <!-- <a href="#"> -->
+          Next&nbsp;&nbsp;
+        <!-- </a> -->
+        <ion-icon name="arrow-forward"></ion-icon>
+      </ion-button>
+    </form>
+  </div>
+
+</ion-content>

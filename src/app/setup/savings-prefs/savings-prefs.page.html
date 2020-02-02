@@ -1,23 +1,37 @@
 <ion-content>
-  <!-- <app-vertical-steps [steps]="3" [curStep]="1"></app-vertical-steps> -->
-  <app-vertical-steps></app-vertical-steps>
+  <app-vertical-steps [curStep]="2"></app-vertical-steps>
 
-  <div class="intro-block-offset"></div>
+  <div style="height:20px;"></div>
+  <div style="height:20px;"></div>
+  <div style="height:20px;"></div>
 
   <div class="intro-content">
     <p color="light">
-      Welcome to Energy Pals!
+      <b>Automation Preferences</b>
+    </p>
+    <p color="light">
+      Rank the options below to help us understand what is important to you.
     </p>
     <div style="height:20px;"></div>
-
-    <p color="light">
-      Let's get you set up to make the most of your new smart charger.
-    </p>
+    <ion-reorder-group (ionItemReorder)="doReorder($event)" disabled="false">
+      <ion-reorder *ngFor="let pref of preferences">
+        <ion-item class="clear-form">
+          <!-- <ion-reorder slot="start"></ion-reorder> -->
+          <ion-label color="light" position="stacked" class="title">
+            {{pref.title}}
+          </ion-label>
+          <ion-label color="light" position="stacked" class="ion-text-wrap">
+            {{pref.description}}
+          </ion-label>
+          <ion-icon name="menu" slot="end"></ion-icon>
+        </ion-item>
+      </ion-reorder>
+    </ion-reorder-group>
 
     <div style="height:40px;"></div>
 
-    <ion-button expand="block" fill="outline" color="light">
-      Get Started&nbsp;&nbsp;
+    <ion-button expand="block" fill="outline" color="light" (click)="onSubmit()">
+      Next&nbsp;&nbsp;
       <ion-icon name="arrow-forward"></ion-icon>
     </ion-button>
   </div>

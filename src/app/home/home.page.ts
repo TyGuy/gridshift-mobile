@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,23 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(
+    private router: Router,
+    public alertController: AlertController,
+  ) {}
 
+  async presentAlert() {
+    const alert = await this.alertController.create({
+      header: 'Charging now!',
+      subHeader: '',
+      message: 'We have overridden your schedule and started your charging.',
+      buttons: ['OK']
+    });
+
+    await alert.present();
+  }
+
+  preferencesClicked() {
+    this.router.navigate(['/savings-prefs']);
+  }
 }

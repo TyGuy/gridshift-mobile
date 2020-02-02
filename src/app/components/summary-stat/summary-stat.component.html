@@ -1,0 +1,21 @@
+<div class="cost-emission-summary-stat">
+  <ion-row class="ion-align-items-center" [class.outsized]="outsized">
+    <ion-col [size]="outsized ? 6 : 4" align-self-center text-center>
+      <div class="image-container">
+        <img [src]="imageUrl"/>
+      </div>
+    </ion-col>
+    <ion-col [size]="outsized ? 6 : 8" align-self-center text-center class="stat-value-block">
+      <ion-row class="ion-align-items-center">
+        <ion-col text-center class="summary-stat-value">
+          {{statValue}}
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-align-items-center">
+        <ion-col text-center class="summary-stat-sub">
+          {{statName}}
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+</div>

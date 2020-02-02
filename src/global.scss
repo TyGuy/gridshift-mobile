@@ -24,3 +24,112 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+
+.intro-content {
+  margin-right: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 100px;
+
+  color: #e6e6e6;
+}
+
+.intro-block-offset {
+  height: 20%;
+}
+
+ion-button a {
+  text-decoration: none;
+  color: #e6e6e6;
+}
+
+ion-item.clear-form {
+  --ion-background-color: transparent;
+  --background-focused: transparent;
+  --background-activated: transparent;
+  --highlight-color-invalid: #CFC976;
+  --border-color: #CFC976;
+  --color: #e6e6e6;
+
+  ion-select {
+    color: #CFC976;
+  }
+
+  ion-input {
+    --placeholder-color: #e6e6e6;
+    --color: #e6e6e6;
+  }
+}
+
+ion-item.no-border {
+  --border-width: 0;
+  --border-color: transparent;
+}
+
+ion-spinner {
+  color: #e6e6e6;
+}
+
+ion-card.grove-card {
+  --background: #e6e6e6;
+  --color: #616161;
+
+  ion-card-title {
+    text-transform: uppercase;
+    color: #616161;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+
+  &.non-feature {
+    ion-card-content {
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
+  }
+}
+
+.cost-emission-summary-stat {
+  ion-row.outsized {
+    width: 120%;
+    margin: auto;
+    margin-left: -10%;
+
+    .image-container {
+      img {
+        max-height: 110%;
+      }
+    }
+  }
+
+  .image-container {
+    height: 40px;
+
+    img {
+      // vertical-align: middle;
+      // height: 100%;
+      // display: block;
+      width: auto;
+      margin: auto;
+      max-width: 100%;
+      max-height: 90%;
+    }
+  }
+
+  .stat-value-block {
+    margin-left: -20px;
+  }
+
+  .summary-stat-value {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: -10px;
+  }
+
+  .summary-stat-sub {
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+}

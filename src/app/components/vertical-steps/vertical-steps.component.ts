@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-vertical-steps',
@@ -6,9 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./vertical-steps.component.scss'],
 })
 export class VerticalStepsComponent implements OnInit {
-
-  // public steps = 3
-  // @Input() curStep = 1
+  @Input() public curStep: number;
 
   constructor() { }
 

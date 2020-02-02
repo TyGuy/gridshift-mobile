@@ -8,18 +8,20 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { VerticalStepsComponent } from './components/vertical-steps/vertical-steps.component';
+import { VerticalStepsModule } from './components/vertical-steps/vertical-steps.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    // VerticalStepsComponent,
   ],
   entryComponents: [],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
+    VerticalStepsModule,
+    HttpClientModule,
   ],
   providers: [
     StatusBar,
